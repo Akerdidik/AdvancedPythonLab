@@ -1,0 +1,38 @@
+{
+    "test_for_first_param": {
+        "name": "test",
+        "surname": "test1",
+        "age": "18",
+        "password": "cc03e747a6afbbcbf8be7668acfebee5"
+    },
+    "aker": {
+        "name": "Didar",
+        "surname": "Sailauov",
+        "age": "18",
+        "password": "ac6f263f90369bef9b31137c03c77c09"
+    },
+    "tester": {
+        "name": "temper",
+        "surname": "tompor",
+        "age": "498",
+        "password": "6ad8536215968eb1f3494143392c77bf"
+    },
+    "tempestoduble": {
+        "name": "arc warden",
+        "surname": "oracle",
+        "age": "4999",
+        "password": "0242c181129b186469f33fe8e2d60452"
+    },
+    "nurik": {
+        "name": "Nurassyl",
+        "surname": "Berik",
+        "age": "18",
+        "password": "8126c78972ce313144c98682d9e55f59"
+    },
+    "admin": {
+        "name": "Administrator",
+        "surname": "root",
+        "age": "infinity",
+        "password": "5a7d0b9091df82c5bb05af7ff77b277a"
+    }
+}
