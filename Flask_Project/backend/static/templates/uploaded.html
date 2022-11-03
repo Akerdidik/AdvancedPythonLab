@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploaded files</title>
+</head>
+
+<body>
+      {% for i in filers %}
+      <ul>
+        <li>
+          <a href={{url_for('downloader.geter',id=i.id)}}>download {{i.file_name}}</a>
+        </li>
+      </ul>
+      {% endfor %}
+</body>
+
+</html>
