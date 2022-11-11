@@ -1,0 +1,43 @@
+{% extends "base.html"%}
+
+{%block body%}
+<section class="probootstrap-section"></section>
+<div class="container">
+
+{% if context%}
+{% if context.user_post%}
+ {% for posts in context.user_post%}  
+ <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate" data-animate-effect="fadeIn">
+    <div class="probootstrap-image-text-block probootstrap-cause">
+      <figure>
+        <img src="/static/img/img_sm_1.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
+      </figure>
+      <div class="probootstrap-cause-inner">
+
+        <div class="row mb30">
+          <div class="col-md-6 col-sm-6 col-xs-6 probootstrap-raised">Raised: <span class="money">{{posts.fromfund}} $</span></div>
+          <div class="col-md-6 col-sm-6 col-xs-6 probootstrap-goal">Goal: <span class="money">{{posts.tofund}} $</span></div>
+        </div>
+        
+        <h2><a href="#">{{posts.title}}</a></h2>
+        <div class="probootstrap-date"><i class="icon-calendar"></i> 2 hours remaining</div>  
+        
+        <p>{{posts.fundraising}}</p>
+        <p>{{posts.additional}}</p>
+        <a href="{{ url_for('edit',post_owner=posts.post_owner,post_id=posts.post_id) }}"><button type="submit" href="{{url_for('edit',post_owner=posts.post_owner,post_id=posts.post_id) }}" class="btn btn-primary">Edit</button></a>
+        <a href="{{ url_for('delete',post_owner=posts.post_owner,post_id=posts.post_id) }}"><button type="submit" href="{{url_for('delete',post_owner=posts.post_owner,post_id=posts.post_id) }}" class="btn btn-primary">Delete</button></a>
+
+
+      </div>
+    </div>
+  </div>
+    
+                  {% endfor %}
+                {% else %}
+                <i>You don't have any posts</i>
+                {% endif %}
+                {% endif %}
+
+
+</div>
+{%endblock%}

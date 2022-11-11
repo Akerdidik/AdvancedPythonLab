@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{%block body%}
+<section class="probootstrap-section"></section>
+<div class="container">
+
+	<form action="{{ url_for('login') }}" method="post">
+	    {% if mesage is defined and mesage %}
+			<div class="alert alert-warning">{{ mesage }}</div>
+		{% endif %}
+		<div class="form-group">
+			<label for="email">Email:</label>
+			<input type="email" class="form-control" id="email" name="email" placeholder="Enter email" name="email" required>
+		</div>
+		<div class="form-group">
+			<label for="pwd">Password:</label>
+			<input type="password" class="form-control" id="password" name="password" placeholder="Enter password" name="pswd" required>
+		</div>    
+		<button type="submit" class="btn btn-primary">Log in</button>
+		<p class="bottom">Login via google<a class="bottom" href="{{url_for('glogin')}}"> Login here</a></p>
+		<p class="bottom">Do not have account yet?<a class="bottom" href="{{url_for('register')}}">Click here</a></p>
+	</form>
+</div>
+{%endblock%}

@@ -1,0 +1,36 @@
+{% extends "base.html"%}
+
+{%block body%}
+<section class="probootstrap-section"></section>
+<div class="container">
+    <form action="{{ url_for('post') }}" method="post">
+        {% if mesage is defined and mesage %}
+            <div class="alert alert-warning">{{ mesage }}</div>
+        {% endif %}
+        <div class="form-group">
+            <label for="titlename">Title Name:</label>
+            <input type="text" class="form-control" id="titlename" name="titlename" placeholder="Enter title" name="titlename" required>
+        </div>
+        <div class="form-group">
+            <p>About fundraising:<Br>
+                <textarea name="fundraising" cols="40" rows="3"></textarea></p>
+        </div>
+        <div class="form-group">
+            <label for="pwd">Adittional:</label>
+            <input type="text" class="form-control" id="additional" name="additional" placeholder="Enter" name="adittional" required>
+        </div>
+        <div class="form-group">
+            <label for="fromfund">From:</label><input type="number" class="form-control" id="fromfund" name="fromfund" placeholder="Enter" name="fromfund"value= "0" readonly>
+            <label for="tofund">To:</label><input type="number" class="form-control" id="tofund" name="tofund" placeholder="Enter" name="tofund" required>
+            <label for="tofund">Owner:</label><input type="text" class="form-control" id="post_owner" name="post_owner" placeholder="Enter" name="post_owner" value ="{{session.id}}" readonly> </div>
+
+        <button type="submit" class="btn btn-primary">Post</button>
+        </form>
+    </div>
+
+    <section class="probootstrap-section"></section>
+
+    
+
+
+{%endblock%}

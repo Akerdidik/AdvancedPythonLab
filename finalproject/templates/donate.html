@@ -1,0 +1,70 @@
+{%extends 'base.html'%}
+{%block title%}{%endblock%}
+{%block body%}      
+
+      <section class="probootstrap-section">
+        <div class="container"><p>               </p>
+        <div class="container">
+          <div class="row">
+          <div class="col-md-5 probootstrap-animate">
+            <form action="{{ url_for('donate') }}" method="post" class="probootstrap-form">
+              {% if mesage is defined and mesage %}
+                  <div class="alert alert-warning">{{ mesage }}</div>
+              {% endif %}
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="eg. John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="eg. info@probootstrap.com" required>
+              </div>
+              <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="text" class="form-control" id="amount" name="amount" placeholder="$1000.00" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Note</label>
+                <textarea cols="30" rows="10" class="form-control" id="message" name="message" placeholder="eg. This donation is for the children who needs food." required></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-lg" id="submit" name="submit" value="Donate">
+              </div>
+            </form>
+          </div>
+
+          <div class="col-md-6 col-md-push-1 probootstrap-animate">
+            
+            
+            <h4>USA Office</h4>
+            <ul class="probootstrap-contact-info">
+              <li><i class="icon-pin"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
+              <li><i class="icon-email"></i><span>info@domain.com</span></li>
+              <li><i class="icon-phone"></i><span>+123 456 7890</span></li>
+            </ul>
+
+            <h4>Europe Office</h4>
+            <ul class="probootstrap-contact-info">
+              <li><i class="icon-pin"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
+              <li><i class="icon-email"></i><span>info@domain.com</span></li>
+              <li><i class="icon-phone"></i><span>+123 456 7890</span></li>
+            </ul>
+
+            <h4>Asia Office</h4>
+            <ul class="probootstrap-contact-info">
+              <li><i class="icon-pin"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
+              <li><i class="icon-email"></i><span>info@domain.com</span></li>
+              <li><i class="icon-phone"></i><span>+123 456 7890</span></li>
+            </ul>
+            
+          </div>
+          
+        </div>
+        </div>
+      </div>
+      </section>
+      {%endblock%}
+
+      
+
+     
